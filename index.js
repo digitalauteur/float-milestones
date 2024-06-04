@@ -10,6 +10,10 @@ const FLOAT_API_KEY = 'your-float-api-key'; // Replace with your Float API key
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 // Endpoint to handle the /milestones slash command
 app.post('/milestones', async (req, res) => {
   try {
